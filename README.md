@@ -16,8 +16,8 @@ This improves code performance drastically by taking advantage of multi threaded
 
 All of the core logic is completely implemented and heavily tested for multiple worker failures.
 
-The only further iteration necessary is packaging it into a useful product. The only roadblocks to that is it currently uses text files for local processing, so a simple interface to not need text files as input would need to be created. Also the codebase would have to be cleaned up a bit for packaging purposes. 
+One further iteration is needed to package the Micro Map Reduce framework into a useful product. The roadblock is it currently uses text files as inputs, so a simple interface would need to be created so it can take in data structures instead. Also the codebase could use some organizing and cleaning. This is all simple and easy to implement.
 
-**The major limitation** to this project in it's current state is that it was implemented in Golang and not C. Golang's paradigms make it so it is already simple to implement multithreaded programming. Also Golang makes it so it can't be easily imported into a different language. This severely limits its practicality. 
+**The major limitation** to this project in it's current state is that it was implemented in Golang and not C. Golang's paradigm makes it simple to implement multithreaded programming. That defeats the purpose of the framework. Also Golang makes it so it can't be easily imported into a different language, where the problem would be viable. This severely limits the Micro Map Reduce framework's practicality. 
 
-For it to be practical and worthwhile, **it needs to be re-written in C**, and then used in C, C++, and Python (via C). This would make the framework incredibly useful in easily making any complex multiprocessing code very simple in languages where it is very hard (C, C++) or not as practical (Python - no native multithreading).
+For it to be worthwhile, **it needs to be re-written in C**, and then used in C, C++, and Python (via C). This would make the framework incredibly useful in easily making any complex multiprocessing code very simple in languages where it is very hard (C, C++) or not as practical (Python - no native multithreading).
