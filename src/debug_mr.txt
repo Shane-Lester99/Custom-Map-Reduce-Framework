@@ -1,503 +1,500 @@
-2020/06/02 12:13:20 Step 3: Making map reduce
-2020/06/02 12:13:20 Step 4: Init map reduce params
-2020/06/02 12:13:20 Step 5: Starting registration server
-2020/06/02 12:13:20 Step 6: Now Accepting connections from registration server
-2020/06/02 12:13:20 Step 7: Splitting Files
-2020/06/02 12:13:20 Step 8: Running master on split files
-2020/06/02 12:13:20 Step 9: Building shared respose channel and job queue
-2020/06/02 12:13:20 Step 9: Creating routine to handle registrations
-2020/06/02 12:13:20 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker0
-2020/06/02 12:13:20 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker1
-2020/06/02 12:13:20 Step 9: Registered workers. Ready to Begin setting them to work.
-2020/06/02 12:13:20 Step 10: Reassinging nodes to work on  Map
-2020/06/02 12:13:20 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker0 job -> Map job number: 0
-2020/06/02 12:13:20 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker1 job -> Map job number: 1
-2020/06/02 12:13:20 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker1 job -> Map job number -> 1
-2020/06/02 12:13:20 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker1 job -> Map job number: 2
-2020/06/02 12:13:20 Job 2 not completed correctly by /var/tmp/824-1000/mr89184-worker1. Placing back in queue.
-2020/06/02 12:13:20 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker1 job -> Map job number -> 2
-2020/06/02 12:13:20 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker1 job -> Map job number: 3
-2020/06/02 12:13:20 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker0 job -> Map job number -> 0
-2020/06/02 12:13:20 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker0 job -> Map job number: 4
-2020/06/02 12:13:20 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker1 job -> Map job number -> 3
-2020/06/02 12:13:20 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker1 job -> Map job number: 5
-2020/06/02 12:13:20 Job 5 not completed correctly by /var/tmp/824-1000/mr89184-worker1. Placing back in queue.
-2020/06/02 12:13:20 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker1 job -> Map job number -> 5
-2020/06/02 12:13:20 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker1 job -> Map job number: 6
-2020/06/02 12:13:20 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker0 job -> Map job number -> 4
-2020/06/02 12:13:20 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker0 job -> Map job number: 7
-2020/06/02 12:13:20 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker1 job -> Map job number -> 6
-2020/06/02 12:13:20 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker1 job -> Map job number: 8
-2020/06/02 12:13:20 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker1 for job 8. No longer alive.
-2020/06/02 12:13:20 Job 8 not completed correctly by /var/tmp/824-1000/mr89184-worker1. Placing back in queue.
-2020/06/02 12:13:20 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker1 job -> Map job number -> 8
-2020/06/02 12:13:20 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker1 job -> Map job number: 9
-2020/06/02 12:13:20 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker1 for job 9. No longer alive.
-2020/06/02 12:13:20 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker0 job -> Map job number -> 7
-2020/06/02 12:13:20 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker0 job -> Map job number: 10
-2020/06/02 12:13:20 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker0 job -> Map job number -> 10
-2020/06/02 12:13:20 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker0 job -> Map job number: 11
-2020/06/02 12:13:20 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker0 job -> Map job number -> 11
-2020/06/02 12:13:20 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker0 job -> Map job number: 12
-2020/06/02 12:13:20 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker0 for job 12. No longer alive.
-2020/06/02 12:13:21 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker2
-2020/06/02 12:13:21 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker3
-2020/06/02 12:13:21 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker2 job -> Map job number -> 0
-2020/06/02 12:13:21 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker2 job -> Map job number: 13
-2020/06/02 12:13:21 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker3 job -> Map job number -> 0
-2020/06/02 12:13:21 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker3 job -> Map job number: 14
-2020/06/02 12:13:21 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker2 job -> Map job number -> 13
-2020/06/02 12:13:21 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker2 job -> Map job number: 15
-2020/06/02 12:13:21 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker3 job -> Map job number -> 14
-2020/06/02 12:13:21 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker3 job -> Map job number: 16
-2020/06/02 12:13:21 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker2 job -> Map job number -> 15
-2020/06/02 12:13:21 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker2 job -> Map job number: 17
-2020/06/02 12:13:21 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker3 job -> Map job number -> 16
-2020/06/02 12:13:21 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker3 job -> Map job number: 18
-2020/06/02 12:13:21 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker2 job -> Map job number -> 17
-2020/06/02 12:13:21 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker2 job -> Map job number: 19
-2020/06/02 12:13:21 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker3 job -> Map job number -> 18
-2020/06/02 12:13:21 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker3 job -> Map job number: 20
-2020/06/02 12:13:21 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker2 job -> Map job number -> 19
-2020/06/02 12:13:21 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker2 job -> Map job number: 21
-2020/06/02 12:13:21 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker3 job -> Map job number -> 20
-2020/06/02 12:13:21 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker3 job -> Map job number: 22
-2020/06/02 12:13:21 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker2 job -> Map job number -> 21
-2020/06/02 12:13:21 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker2 job -> Map job number: 23
-2020/06/02 12:13:21 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker2 for job 23. No longer alive.
-2020/06/02 12:13:21 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker3 job -> Map job number -> 22
-2020/06/02 12:13:21 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker3 job -> Map job number: 24
-2020/06/02 12:13:21 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker3 for job 24. No longer alive.
-2020/06/02 12:13:22 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker5
-2020/06/02 12:13:22 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker4
-2020/06/02 12:13:22 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker5 job -> Map job number -> 0
-2020/06/02 12:13:22 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker5 job -> Map job number: 25
-2020/06/02 12:13:22 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker4 job -> Map job number -> 0
-2020/06/02 12:13:22 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker4 job -> Map job number: 26
-2020/06/02 12:13:22 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker5 job -> Map job number -> 25
-2020/06/02 12:13:22 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker5 job -> Map job number: 27
-2020/06/02 12:13:22 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker4 job -> Map job number -> 26
-2020/06/02 12:13:22 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker4 job -> Map job number: 28
-2020/06/02 12:13:22 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker5 job -> Map job number -> 27
-2020/06/02 12:13:22 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker5 job -> Map job number: 29
-2020/06/02 12:13:22 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker4 job -> Map job number -> 28
-2020/06/02 12:13:22 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker4 job -> Map job number: 30
-2020/06/02 12:13:22 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker5 job -> Map job number -> 29
-2020/06/02 12:13:22 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker5 job -> Map job number: 31
-2020/06/02 12:13:22 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker4 job -> Map job number -> 30
-2020/06/02 12:13:22 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker4 job -> Map job number: 32
-2020/06/02 12:13:22 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker5 job -> Map job number -> 31
-2020/06/02 12:13:22 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker5 job -> Map job number: 33
-2020/06/02 12:13:22 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker4 job -> Map job number -> 32
-2020/06/02 12:13:22 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker4 job -> Map job number: 34
-2020/06/02 12:13:22 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker5 job -> Map job number -> 33
-2020/06/02 12:13:22 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker5 job -> Map job number: 35
-2020/06/02 12:13:22 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker5 for job 35. No longer alive.
-2020/06/02 12:13:22 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker4 job -> Map job number -> 34
-2020/06/02 12:13:22 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker4 job -> Map job number: 36
-2020/06/02 12:13:22 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker4 for job 36. No longer alive.
-2020/06/02 12:13:23 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker7
-2020/06/02 12:13:23 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker6
-2020/06/02 12:13:23 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker7 job -> Map job number -> 0
-2020/06/02 12:13:23 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker7 job -> Map job number: 37
-2020/06/02 12:13:23 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker6 job -> Map job number -> 0
-2020/06/02 12:13:23 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker6 job -> Map job number: 38
-2020/06/02 12:13:23 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker7 job -> Map job number -> 37
-2020/06/02 12:13:23 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker7 job -> Map job number: 39
-2020/06/02 12:13:23 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker6 job -> Map job number -> 38
-2020/06/02 12:13:23 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker6 job -> Map job number: 40
-2020/06/02 12:13:23 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker7 job -> Map job number -> 39
-2020/06/02 12:13:23 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker7 job -> Map job number: 41
-2020/06/02 12:13:23 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker6 job -> Map job number -> 40
-2020/06/02 12:13:23 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker6 job -> Map job number: 42
-2020/06/02 12:13:23 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker7 job -> Map job number -> 41
-2020/06/02 12:13:23 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker7 job -> Map job number: 43
-2020/06/02 12:13:23 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker6 job -> Map job number -> 42
-2020/06/02 12:13:23 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker6 job -> Map job number: 44
-2020/06/02 12:13:23 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker7 job -> Map job number -> 43
-2020/06/02 12:13:23 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker7 job -> Map job number: 45
-2020/06/02 12:13:23 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker6 job -> Map job number -> 44
-2020/06/02 12:13:23 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker6 job -> Map job number: 46
-2020/06/02 12:13:23 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker7 job -> Map job number -> 45
-2020/06/02 12:13:23 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker7 job -> Map job number: 47
-2020/06/02 12:13:23 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker7 for job 47. No longer alive.
-2020/06/02 12:13:23 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker6 job -> Map job number -> 46
-2020/06/02 12:13:23 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker6 job -> Map job number: 48
-2020/06/02 12:13:23 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker6 for job 48. No longer alive.
-2020/06/02 12:13:24 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker8
-2020/06/02 12:13:24 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker9
-2020/06/02 12:13:24 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker8 job -> Map job number -> 0
-2020/06/02 12:13:24 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker8 job -> Map job number: 49
-2020/06/02 12:13:24 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker9 job -> Map job number -> 0
-2020/06/02 12:13:24 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker9 job -> Map job number: 50
-2020/06/02 12:13:24 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker8 job -> Map job number -> 49
-2020/06/02 12:13:24 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker8 job -> Map job number: 51
-2020/06/02 12:13:24 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker9 job -> Map job number -> 50
-2020/06/02 12:13:24 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker9 job -> Map job number: 52
-2020/06/02 12:13:24 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker8 job -> Map job number -> 51
-2020/06/02 12:13:24 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker8 job -> Map job number: 53
-2020/06/02 12:13:24 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker9 job -> Map job number -> 52
-2020/06/02 12:13:24 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker9 job -> Map job number: 54
-2020/06/02 12:13:24 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker8 job -> Map job number -> 53
-2020/06/02 12:13:24 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker8 job -> Map job number: 55
-2020/06/02 12:13:24 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker9 job -> Map job number -> 54
-2020/06/02 12:13:24 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker9 job -> Map job number: 56
-2020/06/02 12:13:24 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker8 job -> Map job number -> 55
-2020/06/02 12:13:24 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker8 job -> Map job number: 57
-2020/06/02 12:13:24 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker9 job -> Map job number -> 56
-2020/06/02 12:13:24 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker9 job -> Map job number: 58
-2020/06/02 12:13:24 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker8 job -> Map job number -> 57
-2020/06/02 12:13:24 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker8 job -> Map job number: 59
-2020/06/02 12:13:24 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker8 for job 59. No longer alive.
-2020/06/02 12:13:24 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker9 job -> Map job number -> 58
-2020/06/02 12:13:24 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker9 job -> Map job number: 60
-2020/06/02 12:13:24 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker9 for job 60. No longer alive.
-2020/06/02 12:13:25 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker10
-2020/06/02 12:13:25 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker11
-2020/06/02 12:13:25 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker10 job -> Map job number -> 0
-2020/06/02 12:13:25 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker10 job -> Map job number: 61
-2020/06/02 12:13:25 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker11 job -> Map job number -> 0
-2020/06/02 12:13:25 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker11 job -> Map job number: 62
-2020/06/02 12:13:25 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker10 job -> Map job number -> 61
-2020/06/02 12:13:25 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker10 job -> Map job number: 63
-2020/06/02 12:13:25 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker11 job -> Map job number -> 62
-2020/06/02 12:13:25 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker11 job -> Map job number: 64
-2020/06/02 12:13:25 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker10 job -> Map job number -> 63
-2020/06/02 12:13:25 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker10 job -> Map job number: 65
-2020/06/02 12:13:25 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker11 job -> Map job number -> 64
-2020/06/02 12:13:25 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker11 job -> Map job number: 66
-2020/06/02 12:13:25 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker10 job -> Map job number -> 65
-2020/06/02 12:13:25 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker10 job -> Map job number: 67
-2020/06/02 12:13:25 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker11 job -> Map job number -> 66
-2020/06/02 12:13:25 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker11 job -> Map job number: 68
-2020/06/02 12:13:25 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker10 job -> Map job number -> 67
-2020/06/02 12:13:25 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker10 job -> Map job number: 69
-2020/06/02 12:13:25 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker11 job -> Map job number -> 68
-2020/06/02 12:13:25 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker11 job -> Map job number: 70
-2020/06/02 12:13:25 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker10 job -> Map job number -> 69
-2020/06/02 12:13:25 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker10 job -> Map job number: 71
-2020/06/02 12:13:25 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker10 for job 71. No longer alive.
-2020/06/02 12:13:25 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker11 job -> Map job number -> 70
-2020/06/02 12:13:25 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker11 job -> Map job number: 72
-2020/06/02 12:13:25 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker11 for job 72. No longer alive.
-2020/06/02 12:13:26 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker12
-2020/06/02 12:13:26 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker13
-2020/06/02 12:13:26 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker12 job -> Map job number -> 0
-2020/06/02 12:13:26 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker12 job -> Map job number: 73
-2020/06/02 12:13:26 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker13 job -> Map job number -> 0
-2020/06/02 12:13:26 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker13 job -> Map job number: 74
-2020/06/02 12:13:26 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker12 job -> Map job number -> 73
-2020/06/02 12:13:26 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker12 job -> Map job number: 75
-2020/06/02 12:13:26 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker13 job -> Map job number -> 74
-2020/06/02 12:13:26 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker13 job -> Map job number: 76
-2020/06/02 12:13:26 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker12 job -> Map job number -> 75
-2020/06/02 12:13:26 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker12 job -> Map job number: 77
-2020/06/02 12:13:26 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker13 job -> Map job number -> 76
-2020/06/02 12:13:26 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker13 job -> Map job number: 78
-2020/06/02 12:13:26 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker12 job -> Map job number -> 77
-2020/06/02 12:13:26 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker12 job -> Map job number: 79
-2020/06/02 12:13:26 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker13 job -> Map job number -> 78
-2020/06/02 12:13:26 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker13 job -> Map job number: 80
-2020/06/02 12:13:26 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker12 job -> Map job number -> 79
-2020/06/02 12:13:26 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker12 job -> Map job number: 81
-2020/06/02 12:13:26 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker13 job -> Map job number -> 80
-2020/06/02 12:13:26 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker13 job -> Map job number: 82
-2020/06/02 12:13:26 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker12 job -> Map job number -> 81
-2020/06/02 12:13:26 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker12 job -> Map job number: 83
-2020/06/02 12:13:26 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker12 for job 83. No longer alive.
-2020/06/02 12:13:26 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker13 job -> Map job number -> 82
-2020/06/02 12:13:26 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker13 job -> Map job number: 84
-2020/06/02 12:13:26 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker13 for job 84. No longer alive.
-2020/06/02 12:13:27 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker15
-2020/06/02 12:13:27 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker14
-2020/06/02 12:13:27 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker15 job -> Map job number -> 0
-2020/06/02 12:13:27 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker15 job -> Map job number: 85
-2020/06/02 12:13:27 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker14 job -> Map job number -> 0
-2020/06/02 12:13:27 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker14 job -> Map job number: 86
-2020/06/02 12:13:27 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker15 job -> Map job number -> 85
-2020/06/02 12:13:27 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker15 job -> Map job number: 87
-2020/06/02 12:13:27 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker14 job -> Map job number -> 86
-2020/06/02 12:13:27 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker14 job -> Map job number: 88
-2020/06/02 12:13:27 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker15 job -> Map job number -> 87
-2020/06/02 12:13:27 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker15 job -> Map job number: 89
-2020/06/02 12:13:27 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker14 job -> Map job number -> 88
-2020/06/02 12:13:27 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker14 job -> Map job number: 90
-2020/06/02 12:13:27 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker15 job -> Map job number -> 89
-2020/06/02 12:13:27 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker15 job -> Map job number: 91
-2020/06/02 12:13:27 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker14 job -> Map job number -> 90
-2020/06/02 12:13:27 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker14 job -> Map job number: 92
-2020/06/02 12:13:27 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker15 job -> Map job number -> 91
-2020/06/02 12:13:27 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker15 job -> Map job number: 93
-2020/06/02 12:13:27 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker14 job -> Map job number -> 92
-2020/06/02 12:13:27 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker14 job -> Map job number: 94
-2020/06/02 12:13:27 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker15 job -> Map job number -> 93
-2020/06/02 12:13:27 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker15 job -> Map job number: 95
-2020/06/02 12:13:27 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker15 for job 95. No longer alive.
-2020/06/02 12:13:27 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker14 job -> Map job number -> 94
-2020/06/02 12:13:27 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker14 job -> Map job number: 96
-2020/06/02 12:13:27 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker14 for job 96. No longer alive.
-2020/06/02 12:13:28 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker16
-2020/06/02 12:13:28 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker17
-2020/06/02 12:13:28 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker16 job -> Map job number -> 0
-2020/06/02 12:13:28 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker16 job -> Map job number: 97
-2020/06/02 12:13:28 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker17 job -> Map job number -> 0
-2020/06/02 12:13:28 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker17 job -> Map job number: 98
-2020/06/02 12:13:28 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker16 job -> Map job number -> 97
-2020/06/02 12:13:28 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker16 job -> Map job number: 99
-2020/06/02 12:13:28 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker17 job -> Map job number -> 98
-2020/06/02 12:13:28 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker17 job -> Map job number: 2
-2020/06/02 12:13:28 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker16 job -> Map job number -> 99
-2020/06/02 12:13:28 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker16 job -> Map job number: 5
-2020/06/02 12:13:28 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker17 job -> Map job number -> 2
-2020/06/02 12:13:28 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker17 job -> Map job number: 8
-2020/06/02 12:13:28 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker16 job -> Map job number -> 5
-2020/06/02 12:13:28 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker16 job -> Map job number: 8
-2020/06/02 12:13:28 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker17 job -> Map job number -> 8
-2020/06/02 12:13:28 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker17 job -> Map job number: 9
-2020/06/02 12:13:28 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker16 job -> Map job number -> 8
-2020/06/02 12:13:28 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker16 job -> Map job number: 12
-2020/06/02 12:13:28 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker17 job -> Map job number -> 9
-2020/06/02 12:13:28 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker17 job -> Map job number: 23
-2020/06/02 12:13:28 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker16 job -> Map job number -> 12
-2020/06/02 12:13:28 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker16 job -> Map job number: 24
-2020/06/02 12:13:28 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker16 for job 24. No longer alive.
-2020/06/02 12:13:28 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker17 job -> Map job number -> 23
-2020/06/02 12:13:28 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker17 job -> Map job number: 35
-2020/06/02 12:13:28 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker17 for job 35. No longer alive.
-2020/06/02 12:13:29 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker18
-2020/06/02 12:13:29 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker18 job -> Map job number -> 0
-2020/06/02 12:13:29 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker18 job -> Map job number: 36
-2020/06/02 12:13:29 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker19
-2020/06/02 12:13:29 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker19 job -> Map job number -> 0
-2020/06/02 12:13:29 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker19 job -> Map job number: 47
-2020/06/02 12:13:29 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker18 job -> Map job number -> 36
-2020/06/02 12:13:29 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker18 job -> Map job number: 48
-2020/06/02 12:13:29 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker19 job -> Map job number -> 47
-2020/06/02 12:13:29 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker19 job -> Map job number: 59
-2020/06/02 12:13:29 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker18 job -> Map job number -> 48
-2020/06/02 12:13:29 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker18 job -> Map job number: 60
-2020/06/02 12:13:29 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker19 job -> Map job number -> 59
-2020/06/02 12:13:29 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker19 job -> Map job number: 71
-2020/06/02 12:13:29 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker18 job -> Map job number -> 60
-2020/06/02 12:13:29 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker18 job -> Map job number: 72
-2020/06/02 12:13:29 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker19 job -> Map job number -> 71
-2020/06/02 12:13:29 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker19 job -> Map job number: 83
-2020/06/02 12:13:29 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker18 job -> Map job number -> 72
-2020/06/02 12:13:29 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker18 job -> Map job number: 84
-2020/06/02 12:13:29 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker19 job -> Map job number -> 83
-2020/06/02 12:13:29 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker19 job -> Map job number: 95
-2020/06/02 12:13:29 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker18 job -> Map job number -> 84
-2020/06/02 12:13:29 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker18 job -> Map job number: 96
-2020/06/02 12:13:29 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker18 for job 96. No longer alive.
-2020/06/02 12:13:29 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker19 job -> Map job number -> 95
-2020/06/02 12:13:29 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker19 job -> Map job number: 24
-2020/06/02 12:13:29 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker19 for job 24. No longer alive.
-2020/06/02 12:13:30 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker21
-2020/06/02 12:13:30 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker20
-2020/06/02 12:13:30 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker21 job -> Map job number -> 0
-2020/06/02 12:13:30 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker21 job -> Map job number: 35
-2020/06/02 12:13:30 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker20 job -> Map job number -> 0
-2020/06/02 12:13:30 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker20 job -> Map job number: 96
-2020/06/02 12:13:30 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr89184-worker21 job -> Map job number -> 35
-2020/06/02 12:13:30 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker21 job -> Map job number: 24
-2020/06/02 12:13:30 Step 12/13: Reassinging nodes to work on  Reduce
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker18 job -> Reduce job number: 0
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker21 job -> Reduce job number: 1
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker0 job -> Reduce job number: 2
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker7 job -> Reduce job number: 3
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker11 job -> Reduce job number: 4
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker17 job -> Reduce job number: 5
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker15 job -> Reduce job number: 6
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker14 job -> Reduce job number: 7
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker20 job -> Reduce job number: 8
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker1 job -> Reduce job number: 9
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker6 job -> Reduce job number: 10
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker8 job -> Reduce job number: 11
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker9 job -> Reduce job number: 12
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker13 job -> Reduce job number: 13
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker16 job -> Reduce job number: 14
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker19 job -> Reduce job number: 15
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker3 job -> Reduce job number: 16
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker5 job -> Reduce job number: 17
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker10 job -> Reduce job number: 18
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker12 job -> Reduce job number: 19
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker2 job -> Reduce job number: 20
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker4 job -> Reduce job number: 21
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker6 for job 10. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker18 for job 0. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker3 for job 16. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker8 for job 11. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker9 for job 12. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker13 for job 13. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker16 for job 14. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker19 for job 15. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker0 for job 2. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker7 for job 3. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker11 for job 4. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker17 for job 5. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker15 for job 6. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker14 for job 7. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker1 for job 9. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker12 for job 19. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker5 for job 17. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker10 for job 18. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker2 for job 20. No longer alive.
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker4 for job 21. No longer alive.
-2020/06/02 12:13:30 Job 8 not completed correctly by /var/tmp/824-1000/mr89184-worker20. Placing back in queue.
-2020/06/02 12:13:30 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker20 job -> Reduce job number -> 8
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker20 job -> Reduce job number: 22
-2020/06/02 12:13:30 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker21 job -> Reduce job number -> 1
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker21 job -> Reduce job number: 23
-2020/06/02 12:13:30 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker21 job -> Reduce job number -> 23
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker21 job -> Reduce job number: 24
-2020/06/02 12:13:30 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker20 job -> Reduce job number -> 22
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker20 job -> Reduce job number: 25
-2020/06/02 12:13:30 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker20 job -> Reduce job number -> 25
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker20 job -> Reduce job number: 26
-2020/06/02 12:13:30 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker21 job -> Reduce job number -> 24
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker21 job -> Reduce job number: 27
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker21 for job 27. No longer alive.
-2020/06/02 12:13:30 Job 27 not completed correctly by /var/tmp/824-1000/mr89184-worker21. Placing back in queue.
-2020/06/02 12:13:30 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker21 job -> Reduce job number -> 27
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker21 job -> Reduce job number: 28
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker21 for job 28. No longer alive.
-2020/06/02 12:13:30 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker20 job -> Reduce job number -> 26
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker20 job -> Reduce job number: 29
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker20 for job 29. No longer alive.
-2020/06/02 12:13:30 Job 29 not completed correctly by /var/tmp/824-1000/mr89184-worker20. Placing back in queue.
-2020/06/02 12:13:30 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker20 job -> Reduce job number -> 29
-2020/06/02 12:13:30 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker20 job -> Reduce job number: 30
-2020/06/02 12:13:30 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker20 for job 30. No longer alive.
-2020/06/02 12:13:31 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker23
-2020/06/02 12:13:31 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker22
-2020/06/02 12:13:31 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker23 job -> Reduce job number -> 0
-2020/06/02 12:13:31 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker23 job -> Reduce job number: 31
-2020/06/02 12:13:31 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker22 job -> Reduce job number -> 0
-2020/06/02 12:13:31 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker22 job -> Reduce job number: 32
-2020/06/02 12:13:31 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker23 job -> Reduce job number -> 31
-2020/06/02 12:13:31 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker23 job -> Reduce job number: 33
-2020/06/02 12:13:31 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker22 job -> Reduce job number -> 32
-2020/06/02 12:13:31 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker22 job -> Reduce job number: 34
-2020/06/02 12:13:31 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker23 job -> Reduce job number -> 33
-2020/06/02 12:13:31 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker23 job -> Reduce job number: 35
-2020/06/02 12:13:31 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker22 job -> Reduce job number -> 34
-2020/06/02 12:13:31 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker22 job -> Reduce job number: 36
-2020/06/02 12:13:31 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker23 job -> Reduce job number -> 35
-2020/06/02 12:13:31 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker23 job -> Reduce job number: 37
-2020/06/02 12:13:31 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker22 job -> Reduce job number -> 36
-2020/06/02 12:13:31 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker22 job -> Reduce job number: 38
-2020/06/02 12:13:31 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker23 job -> Reduce job number -> 37
-2020/06/02 12:13:31 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker23 job -> Reduce job number: 39
-2020/06/02 12:13:31 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker22 job -> Reduce job number -> 38
-2020/06/02 12:13:31 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker22 job -> Reduce job number: 40
-2020/06/02 12:13:31 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker23 job -> Reduce job number -> 39
-2020/06/02 12:13:31 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker23 job -> Reduce job number: 41
-2020/06/02 12:13:31 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker23 for job 41. No longer alive.
-2020/06/02 12:13:31 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker22 job -> Reduce job number -> 40
-2020/06/02 12:13:31 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker22 job -> Reduce job number: 42
-2020/06/02 12:13:31 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker22 for job 42. No longer alive.
-2020/06/02 12:13:32 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker24
-2020/06/02 12:13:32 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker25
-2020/06/02 12:13:32 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker24 job -> Reduce job number -> 0
-2020/06/02 12:13:32 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker24 job -> Reduce job number: 43
-2020/06/02 12:13:32 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker25 job -> Reduce job number -> 0
-2020/06/02 12:13:32 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker25 job -> Reduce job number: 44
-2020/06/02 12:13:32 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker24 job -> Reduce job number -> 43
-2020/06/02 12:13:32 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker24 job -> Reduce job number: 45
-2020/06/02 12:13:32 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker25 job -> Reduce job number -> 44
-2020/06/02 12:13:32 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker25 job -> Reduce job number: 46
-2020/06/02 12:13:32 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker24 job -> Reduce job number -> 45
-2020/06/02 12:13:32 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker24 job -> Reduce job number: 47
-2020/06/02 12:13:32 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker25 job -> Reduce job number -> 46
-2020/06/02 12:13:32 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker25 job -> Reduce job number: 48
-2020/06/02 12:13:32 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker24 job -> Reduce job number -> 47
-2020/06/02 12:13:32 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker24 job -> Reduce job number: 49
-2020/06/02 12:13:32 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker25 job -> Reduce job number -> 48
-2020/06/02 12:13:32 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker25 job -> Reduce job number: 10
-2020/06/02 12:13:32 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker24 job -> Reduce job number -> 49
-2020/06/02 12:13:32 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker24 job -> Reduce job number: 0
-2020/06/02 12:13:32 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker25 job -> Reduce job number -> 10
-2020/06/02 12:13:32 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker25 job -> Reduce job number: 16
-2020/06/02 12:13:32 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker24 job -> Reduce job number -> 0
-2020/06/02 12:13:32 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker24 job -> Reduce job number: 11
-2020/06/02 12:13:32 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker24 for job 11. No longer alive.
-2020/06/02 12:13:32 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker25 job -> Reduce job number -> 16
-2020/06/02 12:13:32 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker25 job -> Reduce job number: 12
-2020/06/02 12:13:32 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker25 for job 12. No longer alive.
-2020/06/02 12:13:33 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker27
-2020/06/02 12:13:33 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker26
-2020/06/02 12:13:33 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker27 job -> Reduce job number -> 0
-2020/06/02 12:13:33 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker27 job -> Reduce job number: 13
-2020/06/02 12:13:33 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker26 job -> Reduce job number -> 0
-2020/06/02 12:13:33 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker26 job -> Reduce job number: 14
-2020/06/02 12:13:33 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker27 job -> Reduce job number -> 13
-2020/06/02 12:13:33 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker27 job -> Reduce job number: 15
-2020/06/02 12:13:33 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker26 job -> Reduce job number -> 14
-2020/06/02 12:13:33 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker26 job -> Reduce job number: 2
-2020/06/02 12:13:33 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker27 job -> Reduce job number -> 15
-2020/06/02 12:13:33 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker27 job -> Reduce job number: 3
-2020/06/02 12:13:33 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker26 job -> Reduce job number -> 2
-2020/06/02 12:13:33 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker26 job -> Reduce job number: 4
-2020/06/02 12:13:33 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker27 job -> Reduce job number -> 3
-2020/06/02 12:13:33 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker27 job -> Reduce job number: 5
-2020/06/02 12:13:33 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker26 job -> Reduce job number -> 4
-2020/06/02 12:13:33 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker26 job -> Reduce job number: 6
-2020/06/02 12:13:33 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker27 job -> Reduce job number -> 5
-2020/06/02 12:13:33 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker27 job -> Reduce job number: 7
-2020/06/02 12:13:33 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker26 job -> Reduce job number -> 6
-2020/06/02 12:13:33 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker26 job -> Reduce job number: 9
-2020/06/02 12:13:33 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker27 job -> Reduce job number -> 7
-2020/06/02 12:13:33 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker27 job -> Reduce job number: 19
-2020/06/02 12:13:33 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker27 for job 19. No longer alive.
-2020/06/02 12:13:33 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker26 job -> Reduce job number -> 9
-2020/06/02 12:13:33 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker26 job -> Reduce job number: 17
-2020/06/02 12:13:33 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker26 for job 17. No longer alive.
-2020/06/02 12:13:34 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker28
-2020/06/02 12:13:34 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker29
-2020/06/02 12:13:34 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker28 job -> Reduce job number -> 0
-2020/06/02 12:13:34 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker28 job -> Reduce job number: 18
-2020/06/02 12:13:34 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker29 job -> Reduce job number -> 0
-2020/06/02 12:13:34 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker29 job -> Reduce job number: 20
-2020/06/02 12:13:34 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker28 job -> Reduce job number -> 18
-2020/06/02 12:13:34 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker28 job -> Reduce job number: 21
-2020/06/02 12:13:34 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker29 job -> Reduce job number -> 20
-2020/06/02 12:13:34 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker29 job -> Reduce job number: 8
-2020/06/02 12:13:34 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker28 job -> Reduce job number -> 21
-2020/06/02 12:13:34 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker28 job -> Reduce job number: 27
-2020/06/02 12:13:34 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker29 job -> Reduce job number -> 8
-2020/06/02 12:13:34 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker29 job -> Reduce job number: 27
-2020/06/02 12:13:34 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker28 job -> Reduce job number -> 27
-2020/06/02 12:13:34 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker28 job -> Reduce job number: 28
-2020/06/02 12:13:34 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker29 job -> Reduce job number -> 27
-2020/06/02 12:13:34 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker29 job -> Reduce job number: 29
-2020/06/02 12:13:34 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker28 job -> Reduce job number -> 28
-2020/06/02 12:13:34 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker28 job -> Reduce job number: 29
-2020/06/02 12:13:34 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker29 job -> Reduce job number -> 29
-2020/06/02 12:13:34 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker29 job -> Reduce job number: 30
-2020/06/02 12:13:34 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker28 job -> Reduce job number -> 29
-2020/06/02 12:13:34 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker28 job -> Reduce job number: 41
-2020/06/02 12:13:34 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker28 for job 41. No longer alive.
-2020/06/02 12:13:34 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker29 job -> Reduce job number -> 30
-2020/06/02 12:13:34 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker29 job -> Reduce job number: 42
-2020/06/02 12:13:34 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr89184-worker29 for job 42. No longer alive.
-2020/06/02 12:13:35 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker31
-2020/06/02 12:13:35 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr89184-worker30
-2020/06/02 12:13:35 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker31 job -> Reduce job number -> 0
-2020/06/02 12:13:35 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker31 job -> Reduce job number: 11
-2020/06/02 12:13:35 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker30 job -> Reduce job number -> 0
-2020/06/02 12:13:35 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker30 job -> Reduce job number: 12
-2020/06/02 12:13:35 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker31 job -> Reduce job number -> 11
-2020/06/02 12:13:35 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker31 job -> Reduce job number: 19
-2020/06/02 12:13:35 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker30 job -> Reduce job number -> 12
-2020/06/02 12:13:35 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker30 job -> Reduce job number: 17
-2020/06/02 12:13:35 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker31 job -> Reduce job number -> 19
-2020/06/02 12:13:35 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker31 job -> Reduce job number: 41
-2020/06/02 12:13:35 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr89184-worker30 job -> Reduce job number -> 17
-2020/06/02 12:13:35 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr89184-worker30 job -> Reduce job number: 42
-2020/06/02 12:13:35 Step 15/16: All data processed. Killing all workers.
-2020/06/02 12:13:35 Step 17: Outputting stats for finished jobs
-2020/06/02 12:13:35 Step 17: Jobs completed by worker: 7
-2020/06/02 12:13:35 Step 17: Jobs completed by worker: 7
-2020/06/02 12:13:35 Step 18: Merging documents
-2020/06/02 12:13:35 Step 19: Cleaning up registration 
-2020/06/02 12:13:35 Step 20: Closing done channel to signify completion
+2020/06/02 12:26:55 Step 3: Making map reduce
+2020/06/02 12:26:55 Step 4: Init map reduce params
+2020/06/02 12:26:55 Step 5: Starting registration server
+2020/06/02 12:26:55 Step 6: Now Accepting connections from registration server
+2020/06/02 12:26:55 Step 7: Splitting Files
+2020/06/02 12:26:55 Step 8: Running master on split files
+2020/06/02 12:26:55 Step 9: Building shared respose channel and job queue
+2020/06/02 12:26:55 Step 9: Creating routine to handle registrations
+2020/06/02 12:26:55 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker0
+2020/06/02 12:26:55 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker1
+2020/06/02 12:26:55 Step 9: Registered workers. Ready to Begin setting them to work.
+2020/06/02 12:26:55 Step 10: Reassinging nodes to work on  Map
+2020/06/02 12:26:55 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker0 job -> Map job number: 0
+2020/06/02 12:26:55 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker1 job -> Map job number: 1
+2020/06/02 12:26:55 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker1 job -> Map job number -> 1
+2020/06/02 12:26:55 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker1 job -> Map job number: 2
+2020/06/02 12:26:55 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker0 job -> Map job number -> 0
+2020/06/02 12:26:55 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker0 job -> Map job number: 3
+2020/06/02 12:26:55 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker1 job -> Map job number -> 2
+2020/06/02 12:26:55 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker1 job -> Map job number: 4
+2020/06/02 12:26:55 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker1 job -> Map job number -> 4
+2020/06/02 12:26:55 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker1 job -> Map job number: 5
+2020/06/02 12:26:55 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker0 job -> Map job number -> 3
+2020/06/02 12:26:55 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker0 job -> Map job number: 6
+2020/06/02 12:26:56 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker1 job -> Map job number -> 5
+2020/06/02 12:26:56 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker1 job -> Map job number: 7
+2020/06/02 12:26:56 Job 7 not completed correctly by /var/tmp/824-1000/mr90109-worker1. Placing back in queue.
+2020/06/02 12:26:56 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker1 job -> Map job number -> 7
+2020/06/02 12:26:56 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker1 job -> Map job number: 8
+2020/06/02 12:26:56 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker1 for job 8. No longer alive.
+2020/06/02 12:26:56 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker0 job -> Map job number -> 6
+2020/06/02 12:26:56 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker0 job -> Map job number: 9
+2020/06/02 12:26:56 Job 8 not completed correctly by /var/tmp/824-1000/mr90109-worker1. Placing back in queue.
+2020/06/02 12:26:56 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker1 job -> Map job number -> 8
+2020/06/02 12:26:56 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker1 job -> Map job number: 10
+2020/06/02 12:26:56 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker1 for job 10. No longer alive.
+2020/06/02 12:26:56 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker0 job -> Map job number -> 9
+2020/06/02 12:26:56 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker0 job -> Map job number: 11
+2020/06/02 12:26:56 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker0 job -> Map job number -> 11
+2020/06/02 12:26:56 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker0 job -> Map job number: 12
+2020/06/02 12:26:56 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker0 for job 12. No longer alive.
+2020/06/02 12:26:56 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker2
+2020/06/02 12:26:56 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker3
+2020/06/02 12:26:56 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker2 job -> Map job number -> 0
+2020/06/02 12:26:56 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker2 job -> Map job number: 13
+2020/06/02 12:26:56 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker3 job -> Map job number -> 0
+2020/06/02 12:26:56 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker3 job -> Map job number: 14
+2020/06/02 12:26:56 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker2 job -> Map job number -> 13
+2020/06/02 12:26:56 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker2 job -> Map job number: 15
+2020/06/02 12:26:56 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker3 job -> Map job number -> 14
+2020/06/02 12:26:56 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker3 job -> Map job number: 16
+2020/06/02 12:26:56 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker2 job -> Map job number -> 15
+2020/06/02 12:26:56 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker2 job -> Map job number: 17
+2020/06/02 12:26:56 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker3 job -> Map job number -> 16
+2020/06/02 12:26:56 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker3 job -> Map job number: 18
+2020/06/02 12:26:57 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker2 job -> Map job number -> 17
+2020/06/02 12:26:57 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker2 job -> Map job number: 19
+2020/06/02 12:26:57 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker3 job -> Map job number -> 18
+2020/06/02 12:26:57 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker3 job -> Map job number: 20
+2020/06/02 12:26:57 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker2 job -> Map job number -> 19
+2020/06/02 12:26:57 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker2 job -> Map job number: 21
+2020/06/02 12:26:57 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker3 job -> Map job number -> 20
+2020/06/02 12:26:57 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker3 job -> Map job number: 22
+2020/06/02 12:26:57 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker2 job -> Map job number -> 21
+2020/06/02 12:26:57 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker2 job -> Map job number: 23
+2020/06/02 12:26:57 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker2 for job 23. No longer alive.
+2020/06/02 12:26:57 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker3 job -> Map job number -> 22
+2020/06/02 12:26:57 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker3 job -> Map job number: 24
+2020/06/02 12:26:57 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker3 for job 24. No longer alive.
+2020/06/02 12:26:57 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker5
+2020/06/02 12:26:57 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker4
+2020/06/02 12:26:57 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker5 job -> Map job number -> 0
+2020/06/02 12:26:57 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker5 job -> Map job number: 25
+2020/06/02 12:26:57 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker4 job -> Map job number -> 0
+2020/06/02 12:26:57 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker4 job -> Map job number: 26
+2020/06/02 12:26:57 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker5 job -> Map job number -> 25
+2020/06/02 12:26:57 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker5 job -> Map job number: 27
+2020/06/02 12:26:57 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker4 job -> Map job number -> 26
+2020/06/02 12:26:57 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker4 job -> Map job number: 28
+2020/06/02 12:26:57 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker5 job -> Map job number -> 27
+2020/06/02 12:26:57 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker5 job -> Map job number: 29
+2020/06/02 12:26:57 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker4 job -> Map job number -> 28
+2020/06/02 12:26:57 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker4 job -> Map job number: 30
+2020/06/02 12:26:58 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker5 job -> Map job number -> 29
+2020/06/02 12:26:58 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker5 job -> Map job number: 31
+2020/06/02 12:26:58 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker4 job -> Map job number -> 30
+2020/06/02 12:26:58 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker4 job -> Map job number: 32
+2020/06/02 12:26:58 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker5 job -> Map job number -> 31
+2020/06/02 12:26:58 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker5 job -> Map job number: 33
+2020/06/02 12:26:58 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker4 job -> Map job number -> 32
+2020/06/02 12:26:58 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker4 job -> Map job number: 34
+2020/06/02 12:26:58 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker5 job -> Map job number -> 33
+2020/06/02 12:26:58 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker5 job -> Map job number: 35
+2020/06/02 12:26:58 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker5 for job 35. No longer alive.
+2020/06/02 12:26:58 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker4 job -> Map job number -> 34
+2020/06/02 12:26:58 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker4 job -> Map job number: 36
+2020/06/02 12:26:58 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker4 for job 36. No longer alive.
+2020/06/02 12:26:58 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker6
+2020/06/02 12:26:58 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker7
+2020/06/02 12:26:58 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker6 job -> Map job number -> 0
+2020/06/02 12:26:58 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker6 job -> Map job number: 37
+2020/06/02 12:26:58 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker7 job -> Map job number -> 0
+2020/06/02 12:26:58 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker7 job -> Map job number: 38
+2020/06/02 12:26:58 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker6 job -> Map job number -> 37
+2020/06/02 12:26:58 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker6 job -> Map job number: 39
+2020/06/02 12:26:58 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker7 job -> Map job number -> 38
+2020/06/02 12:26:58 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker7 job -> Map job number: 40
+2020/06/02 12:26:58 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker6 job -> Map job number -> 39
+2020/06/02 12:26:58 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker6 job -> Map job number: 41
+2020/06/02 12:26:58 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker7 job -> Map job number -> 40
+2020/06/02 12:26:58 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker7 job -> Map job number: 42
+2020/06/02 12:26:59 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker6 job -> Map job number -> 41
+2020/06/02 12:26:59 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker6 job -> Map job number: 43
+2020/06/02 12:26:59 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker7 job -> Map job number -> 42
+2020/06/02 12:26:59 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker7 job -> Map job number: 44
+2020/06/02 12:26:59 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker6 job -> Map job number -> 43
+2020/06/02 12:26:59 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker6 job -> Map job number: 45
+2020/06/02 12:26:59 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker7 job -> Map job number -> 44
+2020/06/02 12:26:59 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker7 job -> Map job number: 46
+2020/06/02 12:26:59 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker6 job -> Map job number -> 45
+2020/06/02 12:26:59 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker6 job -> Map job number: 47
+2020/06/02 12:26:59 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker6 for job 47. No longer alive.
+2020/06/02 12:26:59 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker7 job -> Map job number -> 46
+2020/06/02 12:26:59 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker7 job -> Map job number: 48
+2020/06/02 12:26:59 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker7 for job 48. No longer alive.
+2020/06/02 12:26:59 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker8
+2020/06/02 12:26:59 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker9
+2020/06/02 12:26:59 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker8 job -> Map job number -> 0
+2020/06/02 12:26:59 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker8 job -> Map job number: 49
+2020/06/02 12:26:59 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker9 job -> Map job number -> 0
+2020/06/02 12:26:59 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker9 job -> Map job number: 50
+2020/06/02 12:26:59 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker8 job -> Map job number -> 49
+2020/06/02 12:26:59 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker8 job -> Map job number: 51
+2020/06/02 12:26:59 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker9 job -> Map job number -> 50
+2020/06/02 12:26:59 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker9 job -> Map job number: 52
+2020/06/02 12:26:59 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker8 job -> Map job number -> 51
+2020/06/02 12:26:59 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker8 job -> Map job number: 53
+2020/06/02 12:26:59 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker9 job -> Map job number -> 52
+2020/06/02 12:26:59 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker9 job -> Map job number: 54
+2020/06/02 12:27:00 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker8 job -> Map job number -> 53
+2020/06/02 12:27:00 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker8 job -> Map job number: 55
+2020/06/02 12:27:00 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker9 job -> Map job number -> 54
+2020/06/02 12:27:00 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker9 job -> Map job number: 56
+2020/06/02 12:27:00 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker8 job -> Map job number -> 55
+2020/06/02 12:27:00 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker8 job -> Map job number: 57
+2020/06/02 12:27:00 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker9 job -> Map job number -> 56
+2020/06/02 12:27:00 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker9 job -> Map job number: 58
+2020/06/02 12:27:00 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker8 job -> Map job number -> 57
+2020/06/02 12:27:00 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker8 job -> Map job number: 59
+2020/06/02 12:27:00 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker8 for job 59. No longer alive.
+2020/06/02 12:27:00 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker9 job -> Map job number -> 58
+2020/06/02 12:27:00 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker9 job -> Map job number: 60
+2020/06/02 12:27:00 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker9 for job 60. No longer alive.
+2020/06/02 12:27:00 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker11
+2020/06/02 12:27:00 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker10
+2020/06/02 12:27:00 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker11 job -> Map job number -> 0
+2020/06/02 12:27:00 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker11 job -> Map job number: 61
+2020/06/02 12:27:00 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker10 job -> Map job number -> 0
+2020/06/02 12:27:00 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker10 job -> Map job number: 62
+2020/06/02 12:27:00 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker11 job -> Map job number -> 61
+2020/06/02 12:27:00 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker11 job -> Map job number: 63
+2020/06/02 12:27:00 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker10 job -> Map job number -> 62
+2020/06/02 12:27:00 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker10 job -> Map job number: 64
+2020/06/02 12:27:00 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker11 job -> Map job number -> 63
+2020/06/02 12:27:00 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker11 job -> Map job number: 65
+2020/06/02 12:27:01 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker10 job -> Map job number -> 64
+2020/06/02 12:27:01 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker10 job -> Map job number: 66
+2020/06/02 12:27:01 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker11 job -> Map job number -> 65
+2020/06/02 12:27:01 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker11 job -> Map job number: 67
+2020/06/02 12:27:01 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker10 job -> Map job number -> 66
+2020/06/02 12:27:01 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker10 job -> Map job number: 68
+2020/06/02 12:27:01 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker11 job -> Map job number -> 67
+2020/06/02 12:27:01 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker11 job -> Map job number: 69
+2020/06/02 12:27:01 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker10 job -> Map job number -> 68
+2020/06/02 12:27:01 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker10 job -> Map job number: 70
+2020/06/02 12:27:01 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker11 job -> Map job number -> 69
+2020/06/02 12:27:01 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker11 job -> Map job number: 71
+2020/06/02 12:27:01 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker11 for job 71. No longer alive.
+2020/06/02 12:27:01 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker10 job -> Map job number -> 70
+2020/06/02 12:27:01 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker10 job -> Map job number: 72
+2020/06/02 12:27:01 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker10 for job 72. No longer alive.
+2020/06/02 12:27:01 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker13
+2020/06/02 12:27:01 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker12
+2020/06/02 12:27:01 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker13 job -> Map job number -> 0
+2020/06/02 12:27:01 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker13 job -> Map job number: 73
+2020/06/02 12:27:01 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker12 job -> Map job number -> 0
+2020/06/02 12:27:01 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker12 job -> Map job number: 74
+2020/06/02 12:27:01 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker13 job -> Map job number -> 73
+2020/06/02 12:27:01 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker13 job -> Map job number: 75
+2020/06/02 12:27:01 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker12 job -> Map job number -> 74
+2020/06/02 12:27:01 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker12 job -> Map job number: 76
+2020/06/02 12:27:01 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker13 job -> Map job number -> 75
+2020/06/02 12:27:01 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker13 job -> Map job number: 77
+2020/06/02 12:27:02 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker12 job -> Map job number -> 76
+2020/06/02 12:27:02 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker12 job -> Map job number: 78
+2020/06/02 12:27:02 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker13 job -> Map job number -> 77
+2020/06/02 12:27:02 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker13 job -> Map job number: 79
+2020/06/02 12:27:02 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker12 job -> Map job number -> 78
+2020/06/02 12:27:02 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker12 job -> Map job number: 80
+2020/06/02 12:27:02 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker13 job -> Map job number -> 79
+2020/06/02 12:27:02 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker13 job -> Map job number: 81
+2020/06/02 12:27:02 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker12 job -> Map job number -> 80
+2020/06/02 12:27:02 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker12 job -> Map job number: 82
+2020/06/02 12:27:02 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker13 job -> Map job number -> 81
+2020/06/02 12:27:02 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker13 job -> Map job number: 83
+2020/06/02 12:27:02 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker13 for job 83. No longer alive.
+2020/06/02 12:27:02 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker12 job -> Map job number -> 82
+2020/06/02 12:27:02 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker12 job -> Map job number: 84
+2020/06/02 12:27:02 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker12 for job 84. No longer alive.
+2020/06/02 12:27:02 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker14
+2020/06/02 12:27:02 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker15
+2020/06/02 12:27:02 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker14 job -> Map job number -> 0
+2020/06/02 12:27:02 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker14 job -> Map job number: 85
+2020/06/02 12:27:02 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker15 job -> Map job number -> 0
+2020/06/02 12:27:02 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker15 job -> Map job number: 86
+2020/06/02 12:27:02 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker14 job -> Map job number -> 85
+2020/06/02 12:27:02 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker14 job -> Map job number: 87
+2020/06/02 12:27:02 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker15 job -> Map job number -> 86
+2020/06/02 12:27:02 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker15 job -> Map job number: 88
+2020/06/02 12:27:02 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker14 job -> Map job number -> 87
+2020/06/02 12:27:02 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker14 job -> Map job number: 89
+2020/06/02 12:27:03 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker15 job -> Map job number -> 88
+2020/06/02 12:27:03 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker15 job -> Map job number: 90
+2020/06/02 12:27:03 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker14 job -> Map job number -> 89
+2020/06/02 12:27:03 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker14 job -> Map job number: 91
+2020/06/02 12:27:03 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker15 job -> Map job number -> 90
+2020/06/02 12:27:03 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker15 job -> Map job number: 92
+2020/06/02 12:27:03 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker14 job -> Map job number -> 91
+2020/06/02 12:27:03 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker14 job -> Map job number: 93
+2020/06/02 12:27:03 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker15 job -> Map job number -> 92
+2020/06/02 12:27:03 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker15 job -> Map job number: 94
+2020/06/02 12:27:03 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker14 job -> Map job number -> 93
+2020/06/02 12:27:03 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker14 job -> Map job number: 95
+2020/06/02 12:27:03 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker14 for job 95. No longer alive.
+2020/06/02 12:27:03 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker15 job -> Map job number -> 94
+2020/06/02 12:27:03 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker15 job -> Map job number: 96
+2020/06/02 12:27:03 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker15 for job 96. No longer alive.
+2020/06/02 12:27:03 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker16
+2020/06/02 12:27:03 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker17
+2020/06/02 12:27:03 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker16 job -> Map job number -> 0
+2020/06/02 12:27:03 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker16 job -> Map job number: 97
+2020/06/02 12:27:03 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker17 job -> Map job number -> 0
+2020/06/02 12:27:03 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker17 job -> Map job number: 98
+2020/06/02 12:27:03 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker16 job -> Map job number -> 97
+2020/06/02 12:27:03 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker16 job -> Map job number: 99
+2020/06/02 12:27:03 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker17 job -> Map job number -> 98
+2020/06/02 12:27:03 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker17 job -> Map job number: 7
+2020/06/02 12:27:03 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker16 job -> Map job number -> 99
+2020/06/02 12:27:03 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker16 job -> Map job number: 8
+2020/06/02 12:27:04 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker17 job -> Map job number -> 7
+2020/06/02 12:27:04 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker17 job -> Map job number: 8
+2020/06/02 12:27:04 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker16 job -> Map job number -> 8
+2020/06/02 12:27:04 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker16 job -> Map job number: 10
+2020/06/02 12:27:04 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker17 job -> Map job number -> 8
+2020/06/02 12:27:04 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker17 job -> Map job number: 12
+2020/06/02 12:27:04 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker16 job -> Map job number -> 10
+2020/06/02 12:27:04 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker16 job -> Map job number: 23
+2020/06/02 12:27:04 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker17 job -> Map job number -> 12
+2020/06/02 12:27:04 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker17 job -> Map job number: 24
+2020/06/02 12:27:04 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker16 job -> Map job number -> 23
+2020/06/02 12:27:04 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker16 job -> Map job number: 35
+2020/06/02 12:27:04 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker16 for job 35. No longer alive.
+2020/06/02 12:27:04 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker17 job -> Map job number -> 24
+2020/06/02 12:27:04 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker17 job -> Map job number: 36
+2020/06/02 12:27:04 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker17 for job 36. No longer alive.
+2020/06/02 12:27:04 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker18
+2020/06/02 12:27:04 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker19
+2020/06/02 12:27:04 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker18 job -> Map job number -> 0
+2020/06/02 12:27:04 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker18 job -> Map job number: 47
+2020/06/02 12:27:04 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker19 job -> Map job number -> 0
+2020/06/02 12:27:04 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker19 job -> Map job number: 48
+2020/06/02 12:27:04 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker18 job -> Map job number -> 47
+2020/06/02 12:27:04 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker18 job -> Map job number: 59
+2020/06/02 12:27:04 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker19 job -> Map job number -> 48
+2020/06/02 12:27:04 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker19 job -> Map job number: 60
+2020/06/02 12:27:04 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker18 job -> Map job number -> 59
+2020/06/02 12:27:04 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker18 job -> Map job number: 71
+2020/06/02 12:27:05 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker19 job -> Map job number -> 60
+2020/06/02 12:27:05 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker19 job -> Map job number: 72
+2020/06/02 12:27:05 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker18 job -> Map job number -> 71
+2020/06/02 12:27:05 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker18 job -> Map job number: 83
+2020/06/02 12:27:05 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker19 job -> Map job number -> 72
+2020/06/02 12:27:05 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker19 job -> Map job number: 84
+2020/06/02 12:27:05 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker18 job -> Map job number -> 83
+2020/06/02 12:27:05 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker18 job -> Map job number: 95
+2020/06/02 12:27:05 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker19 job -> Map job number -> 84
+2020/06/02 12:27:05 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker19 job -> Map job number: 96
+2020/06/02 12:27:05 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker18 job -> Map job number -> 95
+2020/06/02 12:27:05 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker18 job -> Map job number: 35
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker18 for job 35. No longer alive.
+2020/06/02 12:27:05 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker19 job -> Map job number -> 96
+2020/06/02 12:27:05 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker19 job -> Map job number: 36
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker19 for job 36. No longer alive.
+2020/06/02 12:27:05 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker21
+2020/06/02 12:27:05 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker20
+2020/06/02 12:27:05 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker21 job -> Map job number -> 0
+2020/06/02 12:27:05 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker21 job -> Map job number: 35
+2020/06/02 12:27:05 Step 11/12: Finished job with address -> /var/tmp/824-1000/mr90109-worker20 job -> Map job number -> 0
+2020/06/02 12:27:05 Step 11: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker20 job -> Map job number: 36
+2020/06/02 12:27:05 Step 12/13: Reassinging nodes to work on  Reduce
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker5 job -> Reduce job number: 0
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker8 job -> Reduce job number: 1
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker9 job -> Reduce job number: 2
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker12 job -> Reduce job number: 3
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker14 job -> Reduce job number: 4
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker16 job -> Reduce job number: 5
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker0 job -> Reduce job number: 6
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker4 job -> Reduce job number: 7
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker7 job -> Reduce job number: 8
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker11 job -> Reduce job number: 9
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker13 job -> Reduce job number: 10
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker18 job -> Reduce job number: 11
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker19 job -> Reduce job number: 12
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker20 job -> Reduce job number: 13
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker1 job -> Reduce job number: 14
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker2 job -> Reduce job number: 15
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker3 job -> Reduce job number: 16
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker4 for job 7. No longer alive.
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker5 for job 0. No longer alive.
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker8 for job 1. No longer alive.
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker9 for job 2. No longer alive.
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker12 for job 3. No longer alive.
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker14 for job 4. No longer alive.
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker16 for job 5. No longer alive.
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker0 for job 6. No longer alive.
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker18 for job 11. No longer alive.
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker7 for job 8. No longer alive.
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker11 for job 9. No longer alive.
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker13 for job 10. No longer alive.
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker19 for job 12. No longer alive.
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker1 for job 14. No longer alive.
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker6 job -> Reduce job number: 17
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker10 job -> Reduce job number: 18
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker15 job -> Reduce job number: 19
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker17 job -> Reduce job number: 20
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker21 job -> Reduce job number: 21
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker2 for job 15. No longer alive.
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker3 for job 16. No longer alive.
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker15 for job 19. No longer alive.
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker17 for job 20. No longer alive.
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker6 for job 17. No longer alive.
+2020/06/02 12:27:05 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker10 for job 18. No longer alive.
+2020/06/02 12:27:05 Job 21 not completed correctly by /var/tmp/824-1000/mr90109-worker21. Placing back in queue.
+2020/06/02 12:27:05 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker21 job -> Reduce job number -> 21
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker21 job -> Reduce job number: 22
+2020/06/02 12:27:05 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker20 job -> Reduce job number -> 13
+2020/06/02 12:27:05 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker20 job -> Reduce job number: 23
+2020/06/02 12:27:06 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker21 job -> Reduce job number -> 22
+2020/06/02 12:27:06 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker21 job -> Reduce job number: 24
+2020/06/02 12:27:06 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker20 job -> Reduce job number -> 23
+2020/06/02 12:27:06 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker20 job -> Reduce job number: 25
+2020/06/02 12:27:06 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker21 job -> Reduce job number -> 24
+2020/06/02 12:27:06 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker21 job -> Reduce job number: 26
+2020/06/02 12:27:06 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker20 job -> Reduce job number -> 25
+2020/06/02 12:27:06 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker20 job -> Reduce job number: 27
+2020/06/02 12:27:06 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker21 job -> Reduce job number -> 26
+2020/06/02 12:27:06 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker21 job -> Reduce job number: 28
+2020/06/02 12:27:06 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker21 for job 28. No longer alive.
+2020/06/02 12:27:06 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker20 job -> Reduce job number -> 27
+2020/06/02 12:27:06 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker20 job -> Reduce job number: 29
+2020/06/02 12:27:06 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker20 for job 29. No longer alive.
+2020/06/02 12:27:06 Job 28 not completed correctly by /var/tmp/824-1000/mr90109-worker21. Placing back in queue.
+2020/06/02 12:27:06 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker21 job -> Reduce job number -> 28
+2020/06/02 12:27:06 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker21 job -> Reduce job number: 30
+2020/06/02 12:27:06 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker21 for job 30. No longer alive.
+2020/06/02 12:27:06 Job 29 not completed correctly by /var/tmp/824-1000/mr90109-worker20. Placing back in queue.
+2020/06/02 12:27:06 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker20 job -> Reduce job number -> 29
+2020/06/02 12:27:06 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker20 job -> Reduce job number: 31
+2020/06/02 12:27:06 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker20 for job 31. No longer alive.
+2020/06/02 12:27:06 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker22
+2020/06/02 12:27:06 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker23
+2020/06/02 12:27:06 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker22 job -> Reduce job number -> 0
+2020/06/02 12:27:06 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker22 job -> Reduce job number: 32
+2020/06/02 12:27:06 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker23 job -> Reduce job number -> 0
+2020/06/02 12:27:06 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker23 job -> Reduce job number: 33
+2020/06/02 12:27:06 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker22 job -> Reduce job number -> 32
+2020/06/02 12:27:06 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker22 job -> Reduce job number: 34
+2020/06/02 12:27:06 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker23 job -> Reduce job number -> 33
+2020/06/02 12:27:06 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker23 job -> Reduce job number: 35
+2020/06/02 12:27:06 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker22 job -> Reduce job number -> 34
+2020/06/02 12:27:06 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker22 job -> Reduce job number: 36
+2020/06/02 12:27:07 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker23 job -> Reduce job number -> 35
+2020/06/02 12:27:07 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker23 job -> Reduce job number: 37
+2020/06/02 12:27:07 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker22 job -> Reduce job number -> 36
+2020/06/02 12:27:07 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker22 job -> Reduce job number: 38
+2020/06/02 12:27:07 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker23 job -> Reduce job number -> 37
+2020/06/02 12:27:07 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker23 job -> Reduce job number: 39
+2020/06/02 12:27:07 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker22 job -> Reduce job number -> 38
+2020/06/02 12:27:07 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker22 job -> Reduce job number: 40
+2020/06/02 12:27:07 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker23 job -> Reduce job number -> 39
+2020/06/02 12:27:07 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker23 job -> Reduce job number: 41
+2020/06/02 12:27:07 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker22 job -> Reduce job number -> 40
+2020/06/02 12:27:07 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker22 job -> Reduce job number: 42
+2020/06/02 12:27:07 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker22 for job 42. No longer alive.
+2020/06/02 12:27:07 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker23 job -> Reduce job number -> 41
+2020/06/02 12:27:07 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker23 job -> Reduce job number: 43
+2020/06/02 12:27:07 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker23 for job 43. No longer alive.
+2020/06/02 12:27:07 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker25
+2020/06/02 12:27:07 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker24
+2020/06/02 12:27:07 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker25 job -> Reduce job number -> 0
+2020/06/02 12:27:07 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker25 job -> Reduce job number: 44
+2020/06/02 12:27:07 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker24 job -> Reduce job number -> 0
+2020/06/02 12:27:07 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker24 job -> Reduce job number: 45
+2020/06/02 12:27:07 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker25 job -> Reduce job number -> 44
+2020/06/02 12:27:07 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker25 job -> Reduce job number: 46
+2020/06/02 12:27:07 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker24 job -> Reduce job number -> 45
+2020/06/02 12:27:07 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker24 job -> Reduce job number: 47
+2020/06/02 12:27:07 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker25 job -> Reduce job number -> 46
+2020/06/02 12:27:07 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker25 job -> Reduce job number: 48
+2020/06/02 12:27:08 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker24 job -> Reduce job number -> 47
+2020/06/02 12:27:08 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker24 job -> Reduce job number: 49
+2020/06/02 12:27:08 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker25 job -> Reduce job number -> 48
+2020/06/02 12:27:08 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker25 job -> Reduce job number: 7
+2020/06/02 12:27:08 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker24 job -> Reduce job number -> 49
+2020/06/02 12:27:08 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker24 job -> Reduce job number: 0
+2020/06/02 12:27:08 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker25 job -> Reduce job number -> 7
+2020/06/02 12:27:08 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker25 job -> Reduce job number: 1
+2020/06/02 12:27:08 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker24 job -> Reduce job number -> 0
+2020/06/02 12:27:08 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker24 job -> Reduce job number: 2
+2020/06/02 12:27:08 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker25 job -> Reduce job number -> 1
+2020/06/02 12:27:08 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker25 job -> Reduce job number: 3
+2020/06/02 12:27:08 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker25 for job 3. No longer alive.
+2020/06/02 12:27:08 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker24 job -> Reduce job number -> 2
+2020/06/02 12:27:08 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker24 job -> Reduce job number: 4
+2020/06/02 12:27:08 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker24 for job 4. No longer alive.
+2020/06/02 12:27:08 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker26
+2020/06/02 12:27:08 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker27
+2020/06/02 12:27:08 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker26 job -> Reduce job number -> 0
+2020/06/02 12:27:08 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker26 job -> Reduce job number: 5
+2020/06/02 12:27:08 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker27 job -> Reduce job number -> 0
+2020/06/02 12:27:08 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker27 job -> Reduce job number: 6
+2020/06/02 12:27:08 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker26 job -> Reduce job number -> 5
+2020/06/02 12:27:08 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker26 job -> Reduce job number: 11
+2020/06/02 12:27:08 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker27 job -> Reduce job number -> 6
+2020/06/02 12:27:08 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker27 job -> Reduce job number: 8
+2020/06/02 12:27:08 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker26 job -> Reduce job number -> 11
+2020/06/02 12:27:08 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker26 job -> Reduce job number: 9
+2020/06/02 12:27:09 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker27 job -> Reduce job number -> 8
+2020/06/02 12:27:09 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker27 job -> Reduce job number: 10
+2020/06/02 12:27:09 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker26 job -> Reduce job number -> 9
+2020/06/02 12:27:09 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker26 job -> Reduce job number: 12
+2020/06/02 12:27:09 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker27 job -> Reduce job number -> 10
+2020/06/02 12:27:09 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker27 job -> Reduce job number: 14
+2020/06/02 12:27:09 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker26 job -> Reduce job number -> 12
+2020/06/02 12:27:09 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker26 job -> Reduce job number: 15
+2020/06/02 12:27:09 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker27 job -> Reduce job number -> 14
+2020/06/02 12:27:09 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker27 job -> Reduce job number: 16
+2020/06/02 12:27:09 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker26 job -> Reduce job number -> 15
+2020/06/02 12:27:09 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker26 job -> Reduce job number: 19
+2020/06/02 12:27:09 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker26 for job 19. No longer alive.
+2020/06/02 12:27:09 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker27 job -> Reduce job number -> 16
+2020/06/02 12:27:09 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker27 job -> Reduce job number: 20
+2020/06/02 12:27:09 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker27 for job 20. No longer alive.
+2020/06/02 12:27:09 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker28
+2020/06/02 12:27:09 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker29
+2020/06/02 12:27:09 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker28 job -> Reduce job number -> 0
+2020/06/02 12:27:09 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker28 job -> Reduce job number: 17
+2020/06/02 12:27:09 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker29 job -> Reduce job number -> 0
+2020/06/02 12:27:09 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker29 job -> Reduce job number: 18
+2020/06/02 12:27:09 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker28 job -> Reduce job number -> 17
+2020/06/02 12:27:09 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker28 job -> Reduce job number: 21
+2020/06/02 12:27:09 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker29 job -> Reduce job number -> 18
+2020/06/02 12:27:09 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker29 job -> Reduce job number: 28
+2020/06/02 12:27:10 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker28 job -> Reduce job number -> 21
+2020/06/02 12:27:10 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker28 job -> Reduce job number: 29
+2020/06/02 12:27:10 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker29 job -> Reduce job number -> 28
+2020/06/02 12:27:10 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker29 job -> Reduce job number: 28
+2020/06/02 12:27:10 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker28 job -> Reduce job number -> 29
+2020/06/02 12:27:10 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker28 job -> Reduce job number: 30
+2020/06/02 12:27:10 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker29 job -> Reduce job number -> 28
+2020/06/02 12:27:10 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker29 job -> Reduce job number: 29
+2020/06/02 12:27:10 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker28 job -> Reduce job number -> 30
+2020/06/02 12:27:10 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker28 job -> Reduce job number: 31
+2020/06/02 12:27:10 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker29 job -> Reduce job number -> 29
+2020/06/02 12:27:10 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker29 job -> Reduce job number: 42
+2020/06/02 12:27:10 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker28 job -> Reduce job number -> 31
+2020/06/02 12:27:10 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker28 job -> Reduce job number: 43
+2020/06/02 12:27:10 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker28 for job 43. No longer alive.
+2020/06/02 12:27:10 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker29 job -> Reduce job number -> 42
+2020/06/02 12:27:10 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker29 job -> Reduce job number: 3
+2020/06/02 12:27:10 Step 11/12/13/14: Uh-oh! Worker failure /var/tmp/824-1000/mr90109-worker29 for job 3. No longer alive.
+2020/06/02 12:27:10 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker31
+2020/06/02 12:27:10 Step 9/10/11/12/13/14 Registering new worker with addr  /var/tmp/824-1000/mr90109-worker30
+2020/06/02 12:27:10 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker31 job -> Reduce job number -> 0
+2020/06/02 12:27:10 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker31 job -> Reduce job number: 4
+2020/06/02 12:27:10 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker30 job -> Reduce job number -> 0
+2020/06/02 12:27:10 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker30 job -> Reduce job number: 19
+2020/06/02 12:27:10 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker31 job -> Reduce job number -> 4
+2020/06/02 12:27:10 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker31 job -> Reduce job number: 20
+2020/06/02 12:27:10 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker30 job -> Reduce job number -> 19
+2020/06/02 12:27:10 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker30 job -> Reduce job number: 43
+2020/06/02 12:27:11 Step 13/14: Finished job with address -> /var/tmp/824-1000/mr90109-worker31 job -> Reduce job number -> 20
+2020/06/02 12:27:11 Step 13: Calling job on worker: address -> /var/tmp/824-1000/mr90109-worker31 job -> Reduce job number: 3
+2020/06/02 12:27:11 Step 15/16: All data processed. Killing all workers.
+2020/06/02 12:27:11 Step 17: Outputting stats for finished jobs
+2020/06/02 12:27:11 Step 17: Jobs completed by worker: 5
+2020/06/02 12:27:11 Step 17: Jobs completed by worker: 7
+2020/06/02 12:27:11 Step 18: Merging documents
+2020/06/02 12:27:11 Step 19: Cleaning up registration 
+2020/06/02 12:27:11 Step 20: Closing done channel to signify completion
