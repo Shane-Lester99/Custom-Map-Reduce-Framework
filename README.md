@@ -1,20 +1,23 @@
-# Custom Map Reduce Framework
+# Micro Map Reduce  
 
-## Why make a custom Map Reduce framework?
+The Map Reduce framework was originally designed and implemented at Google to handle massive amounts of data processing for their search engine. The original Map Reduce framework abstracts away complex and  error prone code for Google scale parallel processing jobs by distributing Map and Reduce code across cheap commodity hardware. Using the constraints of Map and Reduce , simple code could be written that would otherwise be extraordinarily complex.
 
-Most map reduce frameworks require hardware nodes to enact the full parrallel processing power of their map reduce framework. While that is ideal for large jobs, what if a map reduce framework was built to support medium sized jobs? That is rather than only using the map reduce framework for massize amounts of files what if a lightweight mapreduce framework was created that could process lots of local files on one machine in the fasted way possible? Typically multi threaded programs are difficult to write,  but this map reduce framework is meant to make the life of a programmer easier by being able to abstract away all multi threaded code from small to medium sized jobs by combining the idea and architecture of the map reduce framework with golangs natural and simple support for multi threaded programming.
+The essence of the Map Reduce framework is and has always been to process big data, massive parallel processing is necessary. But to make it simple,  we can constrain it to Map and Reduce jobs using this framework.
 
-## State of project
+But what if the idea of using Map and Reduce jobs can solve more general data processing problems that have nothing to do with large scale data processing? That is what the Micro Map Reduce framework solves.
 
-All of the core logic is implemented and unit tested using multiple different map reduce functions and different datasets. The project can as of now do all that was intended, it can parallel process a large amount of files using map and reduce functions. The code however hasn't been used extensively outside the testing so is in that way unproven. However it has been unit tested for multiple failures across nodes.
+Think about it: If parallel code is always difficult to write what if a framework existed that could be imported into your codebase that could abstract away all parallel programming code no matter the use case? 
 
-No major updates were made as of October 2019.
+** This framework does this by implementing a Map Reduce interface over multi threaded single computer code rather than over commodity hardware. ** This allows for any job, not just massive parallel processing jobs, to be written in terms of Map and Reduce to simplify a codebase. 
 
-## What is Map Reduce and How It Was Implemented
+This improves code performance drastically by taking advantage of multi threaded programming, dramatically simplifies the codebase by abstracting away complex multi threaded programming for any kind of job, and overall speeds up a teams workflow by not having to waste time on writing and debugging complex multi threaded code. 
 
-The first task in designing and implementing MapReduce was reading the architecture and understanding the system at a conceptual level. At a production level, MapReduce is used to distribute very large batch processing tasks across horizontally scalable hardware. It was developed at Google to quickly process lots of web crawled data to index it for their search engine.
+## Current State Of Project and Limitations
 
-The abstraction for the system is Map and Reduce jobs. By implementing data processing into Map and Reduce functional primitives, the MapReduce framework will distribute the processing by first applying a Map job on key value pairs to generate a set of intermediary keys and then by applying a reduce function on all those intermediary keys. Although not mentioned in the original paper, MapReduce can be extended to MapReduceMerge, which allows for more complex relational database-like joins on previously mapped or reduced jobs. This wasn’t part of the original lab, but I considered implementing it as an extension to the system, but unfortunately there wasn’t enough time.
-Underlying the abstraction is a system design where the data is partitioned across several worker nodes by a master node. Map and Reduce tasks are assigned to these worker nodes. The worker nodes then process the keys and store the intermediary values in a local file system. Then the master node assigns the reduce tasks to idle worker who then process the reduce tasks and write them to output files to the local file system.
-I was tasked to build a system that mirrors this in Golang. The system begins with a user being able to write two functions, Map and Reduce. The system communicates with each other via remote procedure calls where the Master first assigns workers to map tasks. Once all the map tasks are complete, it assigns them to reduce tasks. This is a deviation from the original implementation, as map and reduce tasks are both assigned immediately by the master node, and once a map task is finished a reduce task is taken to that node immediately. This leads to suboptimal performance in my implementation, but wasn’t realized until the system design was near complete.
-The master node keeps track of worker state and assign them tasks accordingly. Fault tolerance was implemented by checking for incomplete jobs, and if found the master node will reassign a non finished job to a different worker. This is simplistic to the original implementation, which typically needs to set up a ping system similar to what was done for the key value system I built.
+All of the core logic is completely implemented and heavily tested for  multiple worker failures.
+
+The only further iteration necessary is packaging it into a useful product. The only roadblocks to that is it currently uses text files for local processing, so a simple interface to not need text files as input would need to be created. Also the codebase would have to be cleaned up a bit for packaging purposes. 
+
+**The only major limitation** to this project is that it was implemented in Golang and not C. Golang's paradigms make it so it is already simple to implement multithreaded programming. Also Golang makes it so it can't be easily imported into a different language. This severely limits its practicality. 
+
+For it to be practical and worthwhile, **it needs to be re-written in C**, and then used in C, C++, and Python (via C). This framework would make the framework incredibly useful in easily making any complex multiprocessing code very simple in languages where it is very hard (C, C++) or not as practical (Python - no native multithreading).
